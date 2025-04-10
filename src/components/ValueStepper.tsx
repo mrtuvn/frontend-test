@@ -107,9 +107,9 @@ const ValueStepper: React.FC<ValueStepperProps> = ({
   return (
     <div className="flex flex-row items-center gap-2 justify-between">
       <label className="text-sm text-[#aaaaaa] mb-1">{label}</label>
-      <div className="flex items-center bg-[#212121] rounded-[3px]">
+      <div className="flex items-center bg-[var(--input-bg)] rounded-[var(--stepper-btn-border-radius)]">
         <button
-          className="rounded-l-[3px] cursor-pointer w-8 h-8 flex items-center justify-center text-white bg-[#212121] hover:bg-[#3b3b3b] disabled:opacity-50 disabled:cursor-not-allowed"
+          className="p-[var(--stepper-padding)] rounded-l-[var(--stepper-btn-border-radius)] cursor-pointer w-8 h-8 flex items-center justify-center text-white bg-[var(--input-bg)] hover:bg-[var(--active-bg)] disabled:opacity-50 disabled:cursor-not-allowed"
           onClick={decrement}
           disabled={value <= min}
           aria-label="Decrease value"
@@ -123,11 +123,11 @@ const ValueStepper: React.FC<ValueStepperProps> = ({
           onChange={handleInputChange}
           onBlur={handleBlur}
           onKeyDown={handleKeyDown}
-          className="w-16 h-8 bg-[#212121] text-white text-center focus:outline-none"
+          className="w-16 h-8 bg-[var(--input-bg)] text-white text-center focus:outline-none border-x border-[var(--stepper-border-color)]"
           aria-label={`${label} input`}
         />
         <button
-          className="rounded-r-[3px] cursor-pointer w-8 h-8 flex items-center justify-center text-white bg-[#212121] hover:bg-[#3b3b3b] disabled:opacity-50 disabled:cursor-not-allowed"
+          className="p-[var(--stepper-padding)] rounded-r-[var(--stepper-btn-border-radius)] cursor-pointer w-8 h-8 flex items-center justify-center text-white bg-[var(--input-bg)] hover:bg-[var(--active-bg)] disabled:opacity-50 disabled:cursor-not-allowed"
           onClick={increment}
           disabled={value >= effectiveMax}
           aria-label="Increase value"

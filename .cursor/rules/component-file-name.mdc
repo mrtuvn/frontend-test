@@ -1,0 +1,9 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# My rules
+
+- Always use kebab-case for new component file names
+- Don't use additional third-party tools

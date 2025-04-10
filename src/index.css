@@ -1,4 +1,4 @@
-@config "../tailwind.config.js";
+/* @config "../tailwind.config.js"; */
 @import "tailwindcss";
 
 :root {
@@ -10,6 +10,9 @@
   --muted-text: #aaaaaa;
   --accent: #3c67ff;
   --accent-light: #7190ff;
+  --stepper-btn-border-radius: 5px;
+  --stepper-padding: 0.5rem;
+  --stepper-border-color: #3b3b3b;
 }
 
 body {
@@ -23,6 +26,11 @@ input:focus {
 }
 
 @theme inline {
+  --font-family: "Inter", sans-serif;
+  --breakpoint-xs: 340px;
+  --breakpoint-3xl: 120rem;
+  --size-stepper-padding: var(--stepper-padding);
+  --stepper-btn-border-radius: var(--stepper-btn-border-radius);
 }
 
 @layer base {
